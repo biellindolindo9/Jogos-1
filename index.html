@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+<body>
+    
+    <div class="container">
+        <h1>Bem-vindo aos Minijogos!</h1>
+        <div class="game-options">
+            <button class="game-btn" onclick="showGame('guess-number')">Adivinhação de Número</button>
+            <button class="game-btn" onclick="showGame('tic-tac-toe')">Jogo da Velha</button>
+            <button class="game-btn" onclick="showGame('memory-game')">Jogo da Memória</button>
+        </div>
+        <div id="guess-number" class="game" style="display:none;">
+            <h2>Adivinhação de Número</h2>
+            <input type="number" id="guess" placeholder="Digite um número (1-10)">
+            <button onclick="guessNumber()">Adivinhar</button>
+            <p id="guess-feedback"></p>
+        </div>
+        <div id="tic-tac-toe" class="game" style="display:none;">
+            <h2>Jogo da Velha</h2>
+            <div class="tic-tac-toe-board">
+                <button class="tic-tac-toe-btn" onclick="playTicTacToe(0)"></button>
+                <button class="tic-tac-toe-btn" onclick="playTicTacToe(1)"></button>
+                <button class="tic-tac-toe-btn" onclick="playTicTacToe(2)"></button>
+                <button class="tic-tac-toe-btn" onclick="playTicTacToe(3)"></button>
+                <button class="tic-tac-toe-btn" onclick="playTicTacToe(4)"></button>
+                <button class="tic-tac-toe-btn" onclick="playTicTacToe(5)"></button>
+                <button class="tic-tac-toe-btn" onclick="playTicTacToe(6)"></button>
+                <button class="tic-tac-toe-btn" onclick="playTicTacToe(7)"></button>
+                <button class="tic-tac-toe-btn" onclick="playTicTacToe(8)"></button>
+            </div>
+            <p id="tic-tac-toe-status"></p>
+        </div>
+        <div id="memory-game" class="game" style="display:none;">
+            <h2>Jogo da Memória</h2>
+            <div class="memory-board">
+                <!-- Cartas do jogo da memória serão geradas aqui via JS -->
+            </div>
+            <p id="memory-feedback"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
